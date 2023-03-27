@@ -3,7 +3,7 @@ export interface Moment{
     title: string,
     description: string,
     image: string, // string = caminho da imagem
-    createdAt?: string,
-    updatedAt?: string,
-    comment?: [{text: string, username: string}];
+    created_at?: string,
+    updated_at?: string,
+    comments?: [{text: string, username: string}];
 }

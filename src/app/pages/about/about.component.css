@@ -1,0 +1,18 @@
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em;
+}
+.about a {
+    font-weight: bold;
+}
+h2 {
+    color: #DEC129;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+p {
+    margin-bottom: 1em;
+}
