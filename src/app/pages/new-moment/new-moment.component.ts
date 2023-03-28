@@ -5,44 +5,43 @@ import { MomentService } from 'src/app/services/moment.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-new-moment',
-  templateUrl: './new-moment.component.html',
-  styleUrls: ['./new-moment.component.css']
+	selector: 'app-new-moment',
+	templateUrl: './new-moment.component.html',
+	styleUrls: ['./new-moment.component.css'],
 })
 export class NewMomentComponent {
-  btnText: string = "Compartilhar"
+	btnText: string = 'Compartilhar';
 
-  constructor(
-    private momentService: MomentService, 
-    private messagesService: MessagesService, 
-    private router: Router
-    ) {}
+	constructor(
+		private momentService: MomentService,
+		private messagesService: MessagesService,
+		private router: Router
+	) {}
 
-  async createHandler(moment: Moment) {
-    const formData = new FormData();
+	async createHandler(moment: Moment) {
+		const formData = new FormData();
 
-    formData.append("title", moment.title);
-    formData.append("description", moment.description);
-    
-    // verifica se recebe imagem
-    if(moment.image){
-      formData.append('image', moment.image);
-    }
+		formData.append('title', moment.title);
+		formData.append('description', moment.description);
 
-    // método post para criar momento no banco
-    await this.momentService.createMoment(formData).subscribe();
+		// verifica se recebe imagem
+		if (moment.image) {
+			formData.append('image', moment.image);
+		}
 
-    // mensagem de sucesso ao adicionar momento
-    this.messagesService.add("Momento adicionado com sucesso!");
+		// método post para criar momento no banco
+		await this.momentService.createMoment(formData).subscribe();
 
-    // redirect para home após criar o momento
-    this.router.navigate(['/']);
-  }
-  
-  /*
-  * DONE:
-  * 1. Enviar dados para o Service
-  * 2. Terminado o sistema de mensagens para o usuário (ao adicionar momento, erro, etc.)
-  */
+		// mensagem de sucesso ao adicionar momento
+		this.messagesService.add('Momento adicionado com sucesso!');
 
+		// redirect para home após criar o momento
+		this.router.navigate(['/']);
+	}
+
+	/*
+	 * DONE:
+	 * 1. Enviar dados para o Service
+	 * 2. Terminado o sistema de mensagens para o usuário (ao adicionar momento, erro, etc.)
+	 */
 }
