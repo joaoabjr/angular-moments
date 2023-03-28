@@ -1,5 +1,7 @@
 # Moments
+Projeto para propósitos educacionais da criação do Moments, uma plataforma capaz de salvar momentos com título, descrição e imagens. Além disso, é possível deixar comentários em cada momento.
 
+## Version
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
 ## Development server
