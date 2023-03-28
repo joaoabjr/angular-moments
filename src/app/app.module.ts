@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,29 +16,31 @@ import { EquipeComponent } from './pages/equipe/equipe.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MomentComponent } from './pages/moment/moment.component';
+import { EditMomentComponent } from './pages/edit-moment/edit-moment.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    AboutComponent,
-    HomeComponent,
-    NewMomentComponent,
-    MomentFormComponent,
-    EquipeComponent,
-    MessagesComponent,
-    MomentComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    FontAwesomeModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		HeaderComponent,
+		FooterComponent,
+		AboutComponent,
+		HomeComponent,
+		NewMomentComponent,
+		MomentFormComponent,
+		EquipeComponent,
+		MessagesComponent,
+		MomentComponent,
+		EditMomentComponent,
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		HttpClientModule,
+		FormsModule,
+		ReactiveFormsModule,
+		FontAwesomeModule,
+	],
+	providers: [],
+	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

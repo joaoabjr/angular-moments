@@ -18,20 +18,28 @@
 }
 
 .actions {
-    margin: 1em;
+    margin: 2em;
+    padding-bottom: 1em;
+    padding: 1.2em;
+    border: 1px solid #efefef;
 }
 
-.about-moment,
-.actions {
+.about-moment {
   padding-bottom: 1em;
   border-bottom: 1px solid #ccc;
   padding: 1.2em;
 }
 
 .comments {
-  margin-bottom: 1em;
+  margin-bottom: 3em;
   padding: 1.5em 0;
   background-color: #efefef;
+  box-shadow: 2px 6px 6px -1px rgba(112, 112, 112, 0.57);
+  width: 50%;
+}
+
+.comments p {
+  padding: 1em;
 }
 
 .about-moment h3,
@@ -42,29 +50,31 @@
 
 .comment-container {
   text-align: left;
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid #d1d1d1;
   padding: 1em 0;
 }
 
-.comment {
-  font-size: 0.9em;
+.comment,
+.author {
+  padding: 0 1em 0 1em;
 }
 
 .author {
   font-size: 0.8em;
 }
 
-.comment-form {
+.author span {
+  font-weight: bold;
+}
+
+.comments-form {
   margin-bottom: 3em;
 }
 
-.comment-form form {
+.comments-form form {
   margin-top: 1em;
   text-align: left;
   max-width: 300px;
   margin-left: 0;
 }
 
-.author span {
-  font-weight: bold;
-}

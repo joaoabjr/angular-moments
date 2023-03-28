@@ -1,41 +1,40 @@
-<!-- [formGroup]: -->
-<!-- #formDir:  -->
 <form (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
-  <div class="form-group">
-    <label for="title">Título</label>
-    <input
-      type="text"
-      placeholder="Título do seu momento"
-      formControlName="title"
-      required
-    />
-  </div>
-  <!-- validação do campo de title -->
-  <div *ngIf="title.invalid && formDir.submitted" class="validation-error">
-    <p>O título é obrigatório.</p>
-  </div>
+	<input type="hidden" formControlName="id" />
+	<div class="form-group">
+		<label for="title">Título</label>
+		<input
+			type="text"
+			placeholder="Título do seu momento"
+			formControlName="title"
+			required
+		/>
+	</div>
+	<!-- validação do campo de title -->
+	<div *ngIf="title.invalid && formDir.submitted" class="validation-error">
+		<p *ngIf="title.errors?.['required']">O título é obrigatório.</p>
+	</div>
 
-  <!-- description -->
-  <div class="form-group">
-    <label for="description">Descrição</label>
-    <textarea
-      placeholder="Descreva seu momento"
-      formControlName="description"
-      required
-    ></textarea>
-  </div>
-  <!-- validação do campo de description -->
-  <div
-    *ngIf="description.invalid && formDir.submitted"
-    class="validation-error"
-  >
-    <p>A descrição é obrigatória.</p>
-  </div>
+	<!-- description -->
+	<div class="form-group">
+		<label for="description">Descrição</label>
+		<textarea
+			placeholder="Descreva seu momento"
+			formControlName="description"
+			required
+		></textarea>
+	</div>
+	<!-- validação do campo de description -->
+	<div
+		*ngIf="description.invalid && formDir.submitted"
+		class="validation-error"
+	>
+		<p *ngIf="description.errors?.['required']">A descrição é obrigatória.</p>
+	</div>
 
-  <!-- image -->
-  <div class="form-group">
-    <label for="image">Insira a foto que marcou o momento</label>
-    <input type="file" (change)="onFileSelected($event)" />
-  </div>
-  <input type="submit" value="{{ btnText }}" />
+	<!-- image -->
+	<div class="form-group">
+		<label for="image">Insira a foto que marcou o momento</label>
+		<input type="file" (change)="onFileSelected($event)" />
+	</div>
+	<input type="submit" value="{{ btnText }}" />
 </form>
